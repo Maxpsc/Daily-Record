@@ -1,11 +1,9 @@
 #天天小记
-
-##最近
-
-###2017.2.4
-####温习数组排序的各种方法
-以下以升序为例，使用JS实现：
-冒泡排序：通过两两比较，左边若大于右边数字，则左右交换，最小的数字可通过不断交换，“冒泡”到最右边
+最近10天内容
+##2017.2.4
+###温习数组排序的各种方法
+以下以升序为例，使用JS实现：<br>
+**冒泡排序**：通过两两比较，左边若大于右边数字，则左右交换，最小的数字可通过不断交换，“冒泡”到最右边
 ```
 function bubbleSort(arr){
 	if(arr.length<=1){return arr;}
@@ -23,7 +21,7 @@ function bubbleSort(arr){
 	return arr;
 }
 ```
-快速排序：取数组中间数字，遍历其他数字，若小于则放在左边数组，大于或等于则放在右边数组，以此递归，将小数组依次拼接成排好序的数组
+**快速排序**：取数组中间数字，遍历其他数字，若小于则放在左边数组，大于或等于则放在右边数组，以此递归，将小数组依次拼接成排好序的数组
 ```
 function quickSort(arr){
 	if(arr.length<=1){return arr;}
@@ -43,7 +41,7 @@ function quickSort(arr){
 	return quickSort(left).concat(halfNum,quickSort(right));
 }
 ```
-插入排序：将没排好的数字依次与排好数组中的数字比较，若小于则插到其前面，否则继续比较直到放到最后
+**插入排序**：将没排好的数字依次与排好数组中的数字比较，若小于则插到其前面，否则继续比较直到放到最后
 ```
 function insertSort(arr){
 	if(arr.length<=1){return arr;}
@@ -66,7 +64,7 @@ function insertSort(arr){
 	return res;
 }
 ```
-选择排序：每一次将待排序中最小数取出，放到已排序的最后一个
+**选择排序**：每一次将待排序中最小数取出，放到已排序的最后一个
 ```
 function selectSort(arr){
 	if(arr.length<=1){return arr;}
@@ -91,7 +89,7 @@ function sortNumber(a,b){
 }
 console.log([1,10,2,40,3].sort(sortNumber));//[1,2,3,10,40]
 ```
-####将url参数解析为key:value型的obj
+###将url参数解析为key:value型的obj
 ```
 function urlQuery(url){
 	url = url==null ? window.location.href : url;
